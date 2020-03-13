@@ -1,0 +1,50 @@
+﻿<Window x:Class="AdminPhoneBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminPhoneBook"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="548." Width="1094" MaxWidth="1094" MaxHeight="548" >
+    <Window.Background>
+        <ImageBrush ImageSource="images/back.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#b3dff5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.01" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="-1,0,1,0">
+        <TextBox x:Name="textName" Text="ФИО" TextAlignment="Center" Margin="0,129,516,359" Width="auto" HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="Transparent" Foreground="White" BorderThickness="0"/>
+        <!---<TextBlock x:Name="textName"  Text="ФИО" TextAlignment="Center" Margin="0,129,322,359" Width="420" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>-->
+        <Image x:Name="image1" Source="noImage.png" Margin="0,50,793,0" Height="399" VerticalAlignment="Top" HorizontalAlignment="Right" Width="287" />
+        <TextBox x:Name="textBox1" Margin="0,85,325,0" HorizontalAlignment="Right" Width="420" Height="24" VerticalAlignment="Top" />
+        <ListBox x:Name="listBox1" Margin="0,10,4,29" HorizontalAlignment="Right" Width="264"/>
+        <TextBox x:Name="textDepartament" Text="НИЦ" TextAlignment="Center" Margin="0,164,322,324" Width="420" VerticalAlignment="Stretch" HorizontalAlignment="Right" Background="Transparent" Foreground="White" BorderThickness="0"/>
+        <TextBox x:Name="textUnit" Margin="0,199,322,289" Text="Отдел" TextAlignment="Center" Width="420" VerticalAlignment="Stretch" HorizontalAlignment="Right" Background="Transparent" Foreground="White" BorderThickness="0"/>
+        <TextBox x:Name="textPosition" Margin="0,229,322,259" Text="Должность" TextAlignment="Center" Width="420" VerticalAlignment="Stretch" HorizontalAlignment="Right" Background="Transparent" Foreground="White" BorderThickness="0"/>
+        <TextBox x:Name="textNumber" Margin="0,259,322,229" Text="телефон" TextAlignment="Center" Width="420" VerticalAlignment="Stretch" HorizontalAlignment="Right" Background="Transparent" Foreground="White" BorderThickness="0"/>
+        <TextBox x:Name="textBuilding" Margin="531,290,509,198" TextAlignment="Center" VerticalAlignment="Stretch" Background="Transparent" Foreground="White" BorderThickness="0"/>
+        <Button x:Name="button_add" Content="Добавить работника" Width="250" Height="30" Margin="43,396,793,91"/>
+        <Button x:Name="button1" Content="Поиск" Margin="0,357,406,0" Width="250" Height="30" Click="Button1_Click_1" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Button x:Name="button_save" Content="Сохранить изменения" Width="250" Height="29" Margin="0,397,406,0" Click="Button_save_Click" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Label Content="Корпус № " Height="auto" Margin="456,289,547,190" VerticalAlignment="Stretch"/>
+        <Label x:Name="labelCabinet" Height="auto" Content="кабинет" Margin="582,290,430,190" VerticalAlignment="Stretch"/>
+        <TextBox x:Name="textCabinet" Margin="661,290,379,198" TextAlignment="Center" Background="Transparent" Foreground="White" BorderThickness="0"/>
+
+    </Grid>
+</Window>
